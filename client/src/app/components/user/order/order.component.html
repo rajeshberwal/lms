@@ -1,0 +1,42 @@
+<div class="back">
+  <app-user-nav></app-user-nav>
+    <div class="div-center">
+      <div class="content">
+        <h3>New Order</h3>
+        <hr />
+        <form #LoginForm="ngForm" (ngSubmit)="orderHandler(LoginForm.value)">
+          <div class="form-group">
+            <label for="shirts">Shirts</label>
+            <input type="number" ngModel name="shirts" class="form-control" id="shirts" placeholder="Shirts">
+          </div>
+          <div class="form-group">
+            <label for="pants">Pants</label>
+            <input type="number" ngModel name="pants" class="form-control" id="pants" placeholder="Pants">
+          </div>
+          <div class="form-group">
+            <label for="jeans">Jeans</label>
+            <input type="number" ngModel name="jeans" class="form-control" id="jeans" placeholder="Jeans">
+          </div>
+          <div class="form-group">
+            <label for="shorts">Shorts</label>
+            <input type="number" ngModel name="shorts" class="form-control" id="shorts" placeholder="Shorts">
+          </div>
+          <div class="form-group">
+            <label for="towels">Towels</label>
+            <input type="number" ngModel name="towels" class="form-control" id="towels" placeholder="Towels">
+          </div>
+          <div class="form-group">
+            <label for="bedSheets">Bed Sheets</label>
+            <input type="number" ngModel name="bedSheets" class="form-control" id="bedSheets" placeholder="Bed Sheets">
+          </div>
+          <div class="form-group">
+            <label for="covers">Covers</label>
+            <input type="number" ngModel name="covers" class="form-control" id="covers" placeholder="Covers">
+          </div>
+          <br/>
+          <button type="submit" class="btn btn-primary">Place Order</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

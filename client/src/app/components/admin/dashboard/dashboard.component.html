@@ -1,0 +1,34 @@
+<app-admin-nav></app-admin-nav>
+<div class="text-center">
+  <h1>Dashboard</h1>
+</div>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr class="table-primary">
+        <th>Sr.</th>
+        <th>Order Id</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Status</th>
+        <th>Remove Order</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data; let i = index">
+        <td>{{i+1}}</td>
+        <td>{{item._id}}</td>
+        <td>{{item.total}}</td>
+        <td>{{item.price}}</td>
+        <select name="status" #status="ngModel" [(ngModel)]="item['status']" class="form-control" id="status"
+          (change)="editStatus(item._id, $event.target)">
+          <option value="inQueue" selected>In Queue</option>
+          <option value="inProgress">In Progress</option>
+          <option value="washed">Washed</option>
+          <option value="delivered">Delivered</option>
+        </select>
+        <td><button class="btn btn-danger" (click)="deleteOrder(item._id)">Remove</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
